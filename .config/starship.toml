@@ -1,0 +1,16 @@
+add_newline = false
+
+format = "$directory $character"
+
+[character]
+success_symbol = "[➜](bold fg:#4c566a)"
+error_symbol = "[✗](bold fg:#4c566a)"
+
+[directory]
+truncation_length = 5
+truncate_to_repo = false
+format = "[$path]($style)[$read_only]($read_only_style)"
+style = "bold fg:#88c0d0"
+read_only = " 🔒"
+read_only_style = "bold fg:88c0d0"
+truncation_symbol = ".../"

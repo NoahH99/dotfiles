@@ -1,0 +1,24 @@
+Config { font = "xft:JetBrains Mono:style=regular:pixelsize=12:antialias=true:hinting=true"
+       , additionalFonts = [ "xft:JetBrains Mono Nerd Font:pixelsize=12:antialias=true:hinting=true" ]
+       , bgColor = "#2e3440"
+       , fgColor = "#eceff4"
+       , position = Static { xpos = 1920, ypos = 0, width = 1920, height = 30 }
+       , lowerOnStart = True
+       , persistent = True
+       , hideOnStart = False
+       , iconRoot = "."
+       , allDesktops = True
+       , commands = [ Run Com "echo" ["<fn=1>", " ", "\xf303", " ", "</fn>"] "arch" 36000
+                    , Run Com "uname" ["-s", "-r"] "" 36000
+                    , Run Com "echo" ["<fn=1>", " ", "\xf108", " ", "</fn>"] "desktop" 36000
+                    , Run Cpu [] 10
+                    , Run Com "echo" ["<fn=1>", " ", "\xf1c0", " ", "</fn>"] "database" 36000
+                    , Run Memory ["-t","Mem: <usedratio>%"] 10
+                    , Run Com "echo" ["<fn=1>", " ", "\xf133", " ", "</fn>"] "calendar" 36000
+                    , Run Date "%b %d %Y - (%I:%M %p) " "date" 50
+                    , Run StdinReader
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "<fn=1>%StdinReader%</fn>}{%arch%%uname% %desktop%%cpu% %database%%memory% %calendar%%date%"
+       }
