@@ -26,11 +26,12 @@ alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/p
 alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
 alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
 
-alias grep='grep --color=auto'
+alias grep="grep --color=auto"
+alias disk="ncdu"
 
 alias cp="cp -i"
-alias mv='mv -i'
-alias rm='rm -i'
+alias mv="mv -i"
+alias rm="rm -i"
 
 alias df="/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME"
 

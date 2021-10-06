@@ -187,6 +187,7 @@ myManageHook = composeAll
     , className =? "download" --> doFloat
     , className =? "error" --> doFloat
     , className =? "notification" --> doFloat
+    , title =? "Rocket Leauge" --> doShift ( myWorkspaces !! 3 )
     , title =? "Discord" --> doShift ( myWorkspaces !! 3 )
     , title =? "Mozilla Firefox" --> doShift ( myWorkspaces !! 0 )
     , (className =? "firefox" <&&> resource =? "Dialog") --> doFloat
